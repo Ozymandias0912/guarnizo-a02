@@ -116,7 +116,7 @@ public class Solution17 {
     System.out.println("How many hours has it been since your last drink? ");
     hours = input.nextDouble();
 
-    double BAC = (alcohol * 5.14 / weight * ratio1) - (0.015 * hours);
+    double BAC = (alcohol * 5.14 / weight * ratio2) - (0.015 * hours);
     System.out.printf("Your BAC is %.6f \n", BAC);
 
     if (BAC <= 0.08) {
