@@ -40,11 +40,8 @@ public class Solution14 {
         if (state.equals("WI"))
         {
             double tax = order * 0.055;
-            System.out.printf("The subtotal is $%.2f\n", order);
-            System.out.printf("The tax is $%.2f\n", tax);
-            double totalRounded = floor((order + tax) * 100 + 0.5) / 100;
-            System.out.printf("The total is $%.2f\n", totalRounded);
-
+            System.out.printf("The subtotal is $%.2f\n" + "The tax is $%.2f\n" + "The total is $%.2f\n"
+                    , order, tax, floor((order + tax) * 100 + 0.5) / 100);
         }
         else
             System.out.printf("The total is $%.2f\n", order);
