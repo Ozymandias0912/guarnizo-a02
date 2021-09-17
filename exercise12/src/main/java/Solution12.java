@@ -5,7 +5,8 @@
 
 import java.util.Scanner;
 
-import static java.lang.Math.floor;
+import static java.lang.Math.ceil;
+
 
 /*
 * Pseudocode
@@ -39,8 +40,8 @@ public class Solution12 {
         int time = input.nextInt();
 
         double siMoney = principal * (1 + (interest/100 * time)); //simple interest amount accrued
-        double amountRounded = floor(siMoney * 100 + 0.5) / 100;
-        System.out.printf("After %d years at %.2f%%, the investment will be worth $%.2f.", time, interest, amountRounded);
+        double amountRounded = ceil(siMoney * 100 + 0.5) / 100;
+        System.out.printf("After %d years at %.2f%%, the investment will be worth $%.0f.", time, interest, amountRounded);
 
     }
 }
