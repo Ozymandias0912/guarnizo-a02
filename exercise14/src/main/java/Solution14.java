@@ -4,6 +4,9 @@
  */
 
 import java.util.Scanner;
+
+
+
 import static java.lang.Math.floor;
 
 
@@ -37,14 +40,16 @@ public class Solution14 {
         System.out.println("What is the state? ");
         String state = input.next();
 
+        String WI = "The subtotal is $%.2f\n" + "The tax is $%.2f\n" + "The total is $%.2f\n";
         if (state.equals("WI"))
         {
-            double tax = order * 0.055;
-            System.out.printf("The subtotal is $%.2f\n" + "The tax is $%.2f\n" + "The total is $%.2f\n"
-                    , order, tax, floor((order + tax) * 100 + 0.5) / 100);
+            double tax = floor(((order * 0.055) * 100) + 0.5) / 100;
+            double total = order + tax;
+            System.out.printf(WI
+                    , order, tax, total);
         }
-        else
-            System.out.printf("The total is $%.2f\n", order);
+        if (!state.equals("WI"))
+        System.out.printf("The total is $%.2f\n", order);
 
     }
 
