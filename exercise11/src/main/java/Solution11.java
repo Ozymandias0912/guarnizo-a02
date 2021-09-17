@@ -33,7 +33,7 @@ public class Solution11 {
         double rate = input.nextDouble();
 
         double dollars = euros * rate;
-        double dollarsRounded = Math.ceil((dollars * 100) + 0.5) / 100;
+        double dollarsRounded = Math.floor((dollars * 100) + 0.5) / 100;
         System.out.printf(" %.2f euros at an exchange rate of %.4f is \n" + " %.2f U.S. dollars. "
                 , euros, rate, dollarsRounded);
 
