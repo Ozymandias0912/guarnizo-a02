@@ -29,10 +29,12 @@ public class Solution06 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("What is your current age? ");
-        int age = input.nextInt();
+        String ageString = input.next();
+        int age = Integer.parseInt(ageString);
 
         System.out.println("At what age would you like to retire? ");
-        int retirementAge = input.nextInt();
+        String retirementAgeString = input.next();
+        int retirementAge = Integer.parseInt(retirementAgeString);
 
         int timeToRetire = retirementAge - age;
         System.out.printf("You have %d years left until you can retire.\n", timeToRetire);
