@@ -5,7 +5,8 @@
 
 import java.util.Scanner;
 
-import static java.lang.Math.floor;
+import static java.lang.Math.ceil;
+
 
 /*
  * Pseudocode
@@ -50,7 +51,7 @@ public class Solution13 {
 
         double amount;
         amount = principal * (Math.pow((1 + (rate / 100) / period), (period * time)));
-        double amountRounded = floor(amount * 100 + 0.5) / 100;//rounding to the nearest cent
+        double amountRounded = ceil(amount * 100 + 0.5) / 100;//rounding up to the nearest cent
 
         System.out.printf("$%.2f invested at %.1f%% for %.1f years compounded %.0f times per year is $%.2f",
                 principal, rate, time, period, amountRounded);
